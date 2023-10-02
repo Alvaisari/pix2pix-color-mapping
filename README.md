@@ -1,24 +1,24 @@
 # Introduction
 
-This repository contains the solution for the image transition test assignments.
+This repository contains the solution for the image transition test assignment.
 1207 input/output image pairs were given with the goal of translating the initial pictures to the target ones by any algorithm of choice.
 
 # Chosen path
 
 At first glance, the difference between inputs and outputs was in blue/orange color mapping of darker/lighter areas.
-Comparasence of image/target histograms revealed, that the contrast was decreased (the histogram was "compressed") before color mapping, but clearly not only that.
+Comparison of image/target histograms revealed that the contrast was decreased (the histogram was "compressed") before color mapping, but clearly not only that.
 Since the dataset was sufficiently big, the way of transition was not that obvious and I was not bounded in the sense of algorithm choice, I decided to  train a generative adversarial network (GAN) [pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix). 
 
 # Setup
 
-The model was trained on the local machine since it was more powerful than the virtual machine provided by Google Colaboratory.
-Still, the easiest way to check the solution is to look at the [copy at Google Colab]().
+The model was trained on the local machine (see [this notebook](https://github.com/Alvaisari/pix2pix-color-mapping/blob/main/model_training.ipynb)) since it was more powerful than the virtual machine provided by Google Colaboratory.
+Still, the easiest way to check and run the solution is to look at the [copy at Google Colab](https://drive.google.com/file/d/12xof9AqE-7tbPruTBY9mwshiQSsfRJ9m/view?usp=sharing).
 
 Another way is to set the local environment.
-For example, on Windows 11 with Python installed:
+For example, on Windows 11 with Python 3.9.7 installed:
 1. Download or clone the repository 
 2. Run command line
-3. Run commands:
+3. Input commands:
 ```
 cd "way-to-the-folder-with-a-project"
 py -m venv venv
